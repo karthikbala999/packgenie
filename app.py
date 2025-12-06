@@ -3,6 +3,20 @@ import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
 
+
+import streamlit as st
+
+# Hide top-right Streamlit toolbar
+hide_style = """
+    <style>
+        #MainMenu {visibility: hidden;}
+        header {visibility: hidden;}
+        footer {visibility: hidden;}
+        .stAppDeployButton {display: none !important;}
+    </style>
+"""
+st.markdown(hide_style, unsafe_allow_html=True)
+
 # Load environment variables
 load_dotenv()
 
