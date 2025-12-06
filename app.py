@@ -3,6 +3,15 @@ import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
 
+hide_icons = """
+<style>
+    [data-testid="stToolbar"] {display: none !important;}
+    header[data-testid="stHeader"] {display: none !important;}
+    footer {display: none !important;}
+</style>
+"""
+st.markdown(hide_icons, unsafe_allow_html=True)
+
 # Load environment variables
 load_dotenv()
 
